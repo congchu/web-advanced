@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 태그 선택자 */
+    p {
+      font-size: 16px;
+      font-style: italic;
+    }
+
+    /* ID 선택자 */
+    #title {
+      text-decoration: underline;
+      font-weight: bold;
+
+    }
+
+    /* 클래스 선택자 */
+    .description {
+      color: green;
+    }
+
+    /* 자식 선택자 */
+    div p {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="title">나는 개발자다</div>
+
+  <div class="description">개발자는 잘먹고</div>
+
+  <div class="description">개발자는 잘자고</div>
+
+  <div class="description">그래야한다</div>
+  <hr />
+
+  <p>태그 선택자 </p>
+  <div>
+    <p>자식 선택자</p>
+  </div>
+
+</body>
+
+</html>
