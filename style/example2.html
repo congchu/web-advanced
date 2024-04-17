@@ -23,19 +23,17 @@
   <span class="bottom">bottom</span>
   <div class="left">left</div>
 
-
-
   <style>
     span,
     div {
       background: yellow;
-      background: #666666;
+      top: 5px;
       border: 1px solid red;
     }
 
     .top {
       position: relative;
-      top: 5px;
+      top: 0px;
       z-index: 1;
     }
 
@@ -58,13 +56,14 @@
 </section> -->
 
 <!-- position:absolute -->
-<!-- <section>
-  <div>
+<!-- <section style="padding:10px;">
+  <div className="border:solid 1px">
     <div id="absolute">absolute</div>
   </div>
   <div id="parent">
     <div id="child">children</div>
   </div>
+
 
   <style>
     #absolute {
@@ -75,27 +74,35 @@
 
     #parent {
       position: relative;
-      width: 100px;
-      height: 100px;
       background: skyblue;
+      height: 30px;
     }
 
     #child {
-      position: absolute;
-      right: 0;
+      /* position: absolute; */
+      bottom: 0px;
     }
   </style>
-</section>
- -->
+</section> -->
+
 
 <!-- position: fixed -->
 
 <div>
+  <div>hello</div>
   <div id="fixed">fixed</div>
 </div>
 <br />
 <br />
 <br />
+
+<br />
+
+<br />
+<br />
+<br />
+<br />
+<div>how</div>
 <br />
 <br />
 <br />
@@ -103,11 +110,7 @@
 <br />
 <br />
 <br />
-<br />
-<br />
-<br />
-<br />
-<br />
+
 <br />
 <br />
 <br />
@@ -128,7 +131,7 @@
 
 
 <!-- float -->
-<section>
+<!-- <section>
   <html>
 
   <head>
@@ -160,4 +163,4 @@
   </body>
 
   </html>
-</section>
+</section> -->
