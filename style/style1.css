@@ -1,0 +1,47 @@
+/* 태그 선택자 */
+p {
+  font-size: 16px;
+  font-style: italic;
+}
+
+/* ID 선택자 */
+#title {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* 자식 선택자 */
+div p {
+  color: green;
+}
+
+/* 클래스 선택자 */
+.description {
+  color: green;
+  color: yellow;
+  color: pink;
+}
+
+/* 우선순위 1 */
+
+.blue {
+  color: blue;
+}
+.red {
+  color: red;
+}
+
+.parent {
+  background-color: yellow;
+  color: blue;
+  padding: 20px;
+}
+
+.child1 {
+  background-color: pink;
+  color: red;
+}
+
+div p span.bg-yellow {
+  background-color: yellow;
+}
