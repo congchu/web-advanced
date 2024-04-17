@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>before/after</title>
+  <link rel="stylesheet" href="./common.css">
+
+  <style>
+    .day4::before {
+      content: "오늘은 ";
+      color: rgb(247, 40, 216);
+    }
+
+    .day5::after {
+      content: "이에요";
+      color: rgb(247, 40, 216);
+    }
+
+    .day:hover {
+      background-color: #555555;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>[before/after]</div>
+  <div class="day day4">즐거운 목요일</div>
+  <div class="day day5">즐거운 금요일</div>
+</body>
+
+</html>
