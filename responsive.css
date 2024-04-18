@@ -4,9 +4,18 @@ body {
   maring 좌우가 auto로 적용되며
   가운데 정렬이 된다.
    */
+
   max-width: 1228px;
   margin: 0 auto;
   padding: 0 20px;
+  background: rgb(205, 210, 255);
+  background: linear-gradient(
+    120deg,
+    rgba(205, 210, 255, 0.4) 0%,
+    rgba(247, 255, 243, 0.8855917366946778) 44%,
+    rgba(246, 226, 255, 0.7595413165266106) 80%,
+    rgba(0, 151, 255, 0.13489145658263302) 100%
+  );
 }
 
 @media (max-width: 768px) {
@@ -192,6 +201,7 @@ header h1 span {
 .project-item {
   box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
+  background-color: white;
 }
 
 .project-thumbnail {
