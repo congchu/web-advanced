@@ -19,4 +19,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
         run: |
-          aws s3 cp --recursive --region ap-northeast-2 ./ s3://tori-dog-portfolio
+          aws s3 cp --recursive --region ap-northeast-2 ./web/ s3://tori-dog-portfolio
