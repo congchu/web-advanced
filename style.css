@@ -235,3 +235,8 @@ footer .footer-links {
   background-clip: text;
   color: transparent; /* 글자 색을 투명하게 */
 }
+
+.nav-items.mobile {
+  display: none;
+  /* visibility: hidden; */
+}
