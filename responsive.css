@@ -1,0 +1,16 @@
+body {
+  /* background-color: yellow; */
+}
+
+.top-nav .top-logo {
+  width: 95px;
+  height: 60px;
+}
+
+.nav-items {
+  display: none;
+}
+
+.nav-items-mobile {
+  display: flex;
+}
