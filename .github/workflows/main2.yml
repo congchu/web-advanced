@@ -21,5 +21,5 @@ jobs:
           aws s3 cp \
             --recursive \
             --region ap-northeast-2 \
-            ./web/ s3://pd-porfolio-minjeong
+            ./web/ s3://pd-portfolio-minjeong
         
