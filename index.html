@@ -5,12 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./reset.css">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./responsive.css">
   <title>개발 강아지 토리</title>
 </head>
-
-
-
 
 <body>
   <!-- navigation -->
@@ -30,6 +27,13 @@
       <a href="#"><img src="./images/icons/twitter.svg" alt="twitter" /></a>
       <a href="#"><img src="./images/icons/linkedin.svg" alt="linkedin" /></a>
     </div>
+    <ul class="nav-items mobile">
+      <li><a href="#">Home</a></li>
+      <li>About</li>
+      <li>Tech Stack</li>
+      <li>Projects</li>
+      <li>Contact</li>
+    </ul>
   </nav>
   <!-- 헤더 : 내소개 -->
   <header>
@@ -226,8 +230,8 @@
       <!-- 이메일/연락처/SNS -->
       <div class="footer-content">
         <div class="footer-contact">
-          <a href="tel:+1234567890">010-1234-5678</a>
-          <a href="mailto:cookie00421@gmail.com">cookie00421@gmail.com</a>
+          <a class="tel" href="tel:+1234567890">010-1234-5678</a>
+          <a class="email" href="mailto:cookie00421@gmail.com">cookie00421@gmail.com</a>
           <div class="footer-links">
             <a href="https://github.com/congchu" target="_blank">
               <img src="./images/icons/github.svg" alt="github" />
@@ -242,7 +246,7 @@
     <!-- 가로 선 -->
     <div class="hr"></div>
     <div class="madeby">
-      Designed and built by Pavan <span>MG</span>
+      Designed and built <span class="br"></span>by Pavan <span>MG</span>
       with <span>Love</span> & <span>Coffee</span>
       &copy; 2024
     </div>
