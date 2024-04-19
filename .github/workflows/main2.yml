@@ -1,4 +1,4 @@
-name: Deploy To S3
+name: Deploy To S3 <-working
 
 on:
   push:
@@ -25,14 +25,11 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
-          aws s3 cp \
-            --recursive \
-            --region ap-northeast-2 \
-            ./web/ s3://pd-portfolio-minjeong
+          aws s3 cp --recursive --region ap-northeast-2 ./web/ s3://pd-portfolio-minjeong
       
       - name: Invalidate CloudFront Distribution
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
-          aws cloudfront create-invalidation --distribution-id YOUR_DISTRIBUTION_ID --paths "/*"
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_SECRET_ACCESS_KEY }} --paths "/*"
