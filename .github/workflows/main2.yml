@@ -10,17 +10,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: checkout v2
+      - name: Checkout v2
         uses: actions/checkout@v2
       
-      - name: Remove s3 files
+      - name: Delete all files in S3
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run:
-          aws s3 rm s3://pd-portfolio-minjeong
+        run: |
+          aws s3 rm s3://pd-portfolio-minjeong --recursive --region ap-northeast-2
 
-      - name: Deploy To s3
+      - name: Deploy To S3
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -29,4 +29,10 @@ jobs:
             --recursive \
             --region ap-northeast-2 \
             ./web/ s3://pd-portfolio-minjeong
-        
+      
+      - name: Invalidate CloudFront Distribution
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: |
+          aws cloudfront create-invalidation --distribution-id YOUR_DISTRIBUTION_ID --paths "/*"
